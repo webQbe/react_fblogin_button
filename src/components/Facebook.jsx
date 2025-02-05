@@ -12,9 +12,19 @@ export default class Facebook extends Component {
         picture: ''
     }
 
-    // Console Log Response
+     // Handle User Data
     responseFacebook = response => {
+        // Console Log Response
         console.log(response);
+
+        // Update State 
+        this.setState({
+            isLoggedIn: true,
+            userID: response.userID,
+            name: response.name,
+            email: response.email,
+            picture: response.picture.data.url
+        });
     }
 
     // Handle Click Event
@@ -25,11 +35,17 @@ export default class Facebook extends Component {
 
     // Check If Logged-In
     if(this.state.isLoggedIn){
-
-        fbContent = null;
+        // Show User Data
+        fbContent = (
+            <div style={{ width: '400px', margin: 'auto', background: '#f4f4f4', padding: '20px'}}>
+                <img src={this.state.picture} alt={this.state.name} />
+                <h2>Welcome {this.state.name}</h2>
+                Email: {this.state.email}
+            </div>
+        );
 
     } else {
-        // Update fbContent
+        // Show Log In Button
         fbContent = (
             <FacebookLogin 
                 appId="645422394508324"
@@ -41,6 +57,7 @@ export default class Facebook extends Component {
     }
 
     return (
+      // Output to Page
       <div>
         {fbContent}
       </div>
