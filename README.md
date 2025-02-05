@@ -43,7 +43,7 @@
 5. Install dependencies:
     - Open terminal and run `npm install`
 6. Run sever with `npm run dev`
-7. Install packages: `npm install @greatsumini/react-facebook-login`
+7. Install packages: `npm install react-facebook-login --legacy-peer-deps`
 8. Delete `public/vite.svg`, `src/assets/react.svg` and `src/index.css`
 9. Remove following imports:
 ```
@@ -54,5 +54,4 @@ import viteLogo from '/vite.svg'
 /* main.jsx */
 import './index.css'
 ```
-10. Clear contents in `src/App.css` and `src/App.jsx`
-11. Create `.env` file
+10. Create `.env` file
