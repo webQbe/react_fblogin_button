@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import FacebookLogin from "react-facebook-login";
 
 export default class Facebook extends Component {
-    
+
     // Define Initial State
     state = {
         isLoggedIn: false,
@@ -33,7 +33,7 @@ export default class Facebook extends Component {
         fbContent = (
             <FacebookLogin 
                 appId="645422394508324"
-                autoLoad={true} // Auto Login
+                autoLoad={false} // Auto Login
                 fields="name,email,picture"
                 onClick={this.componentClicked}
                 callback={this.responseFacebook}
