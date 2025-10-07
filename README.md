@@ -1,9 +1,11 @@
 # React Facebook Login Button
+This repo is an adaptation of [Facebook Login Button In React](https://www.youtube.com/watch?v=ea9KyE78qKI) by Brad Traversy. 
 
+I followed the tutorial to learn followings:
 - Facebook Authentication with React
 - Request data when user clicks the button 
 - Store user's data in component state and render it in the app
-- You can use this data to store in a database
+- Use this data to store in a database
 
 ## Getting Started
 
@@ -55,3 +57,10 @@ import viteLogo from '/vite.svg'
 import './index.css'
 ```
 10. Create `.env` file
+
+
+## Credits
+Original tutorial: [Facebook Login Button In React](https://www.youtube.com/watch?v=ea9KyE78qKI) — Brad Traversy.
+
+## License
+MIT License
